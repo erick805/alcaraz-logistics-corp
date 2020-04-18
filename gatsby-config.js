@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Alcaraz Logistics Corporation`,
-    description: `We are a multinational logistics company with headquarters in New York City`,
-    author: `@gatsbyjs`
+    description: `We are a multinational logistics company with headquarters in New York City`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

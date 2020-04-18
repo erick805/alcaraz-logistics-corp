@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://www.alogs.co">
-    <img alt="Alogs" src="" width="60" />
+    <img alt="Alogs" src="src/images/logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">

@@ -8,7 +8,7 @@ const path = require('path')
  exports.createPages = ({graphql, actions}) => {
      const {createPage} = actions
      const postLayoutTemplate = path.resolve('./src/components/postLayout.js')
-
+     
      return graphql(`
        query blogSlugsQuery {
          allMarkdownRemark {
@@ -27,7 +27,7 @@ const path = require('path')
          }
          results.data.allMarkdownRemark.edges.forEach(({node}) => {
              createPage({
-                 path: node.frontmatter.slug,
+                 path: `/posts${node.frontmatter.slug}`,
                  component: postLayoutTemplate,
                  context: {
                      slug: node.frontmatter.slug

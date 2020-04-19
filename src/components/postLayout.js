@@ -1,7 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import {graphql} from 'gatsby'
 import Layout from './layout'
 
+// Static Query can be used anywhere, does not accept variables, can't use context
+
+// Page Query must be used on pages
 const PostLayout = () => {
     
 
@@ -18,5 +21,21 @@ PostLayout.propTypes = {
 
 }
 
+export const query = graphql`
+    query PostQuery {
+        markdownRemark(frontmatter: {
+        slug: {
+            eq: "/third-post"
+        }
+        }) {
+        html 
+        frontmatter {
+            title
+            date
+            slug
+        }
+        }
+    }  
+`
 export default PostLayout
 

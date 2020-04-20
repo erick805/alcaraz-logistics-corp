@@ -1,8 +1,11 @@
 import PropTypes from "prop-types"
 import React from "react"
-import styled from 'styled-components'
-import logo from '../images/logo.png'
 
+// Components
+import styled from 'styled-components'
+
+// Assets
+import logo from '../images/logo.png'
 
 const HeaderWrapper = styled.div`
   background: #524763;

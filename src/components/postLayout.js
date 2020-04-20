@@ -1,5 +1,7 @@
 import React from 'react'
 import {graphql} from 'gatsby'
+
+// Components
 import Layout from './layout'
 import Archive from './archive'
 

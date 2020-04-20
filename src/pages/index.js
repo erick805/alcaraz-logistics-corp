@@ -8,8 +8,8 @@ import SEO from "../components/seo"
 // Assets
 import Logo from "../components/image"
 
-const IndexPage = () => (
-  <Layout>
+const IndexPage = ({location}) => (
+  <Layout location={location}>
     <Logo/>
     <SEO title="Home" />
     <h1>Alcaraz Logistics Corporation</h1>

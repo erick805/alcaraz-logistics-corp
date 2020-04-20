@@ -11,12 +11,12 @@ import Archive from './archive'
 
 
 
-const PostLayout = (props) => {
-    const {markdownRemark} = props.data
-
+const PostLayout = ({data, path}) => {
+    const {markdownRemark} = data
+    
     return (
         <>
-        <Layout>
+        <Layout location={path}>
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
           <Archive />

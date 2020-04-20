@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <Logo />
+    <Logo/>
     <SEO title="Home" />
     <h1>Alcaraz Logistics Corporation</h1>
     <Link to="/page-2/">Go to page 2</Link>

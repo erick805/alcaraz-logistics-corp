@@ -1,6 +1,6 @@
 import React from 'react'
 import {graphql} from 'gatsby'
-import styled from 'styled-components'
+
 // Components
 import Layout from './layout'
 import Archive from './archive'

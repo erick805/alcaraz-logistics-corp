@@ -55,8 +55,8 @@ const Layout = ({ children, location }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Spring
-         from={{height: location.pathname ? 100 : 200 }}
-         to={{height: location.pathname ? 200 : 100 }}
+         from={{height: location.pathname === '/' ? 100 : 200 }}
+         to={{height: location.pathname === '/' ? 200 : 100 }}
       >
         {styles => (
           <div style={{overflow: 'hidden', ...styles}}>
@@ -78,4 +78,7 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired
 }
 
+Layout.defaultProps = {
+  location: {}
+}
 export default Layout

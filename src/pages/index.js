@@ -1,6 +1,3 @@
-/* eslint-disable import/first */
-const typeface = require("typeface-open-sans")
-
 import React from "react"
 import { Link } from "gatsby"
 

@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-// import { Spring } from 'react-spring/renderprops'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 

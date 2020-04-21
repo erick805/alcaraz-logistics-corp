@@ -7,29 +7,25 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-// import Img from 'gatsby-image'
 import { Spring } from 'react-spring/renderprops'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 // Components
 import Header from "./header"
-import Archive from "./archive"
 
 // CSS
 import "./layout.css"
 
-
 const MainLayout = styled.main`
   max-width: 90%;
   margin: 1rem auto;
-  // display: grid;
+  display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 40px;
 `
 const Layout = ({ children, location }) => {
-  console.log("here is your location path name:", location.pathname)
-  console.log("location:", location)
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -41,18 +37,6 @@ const Layout = ({ children, location }) => {
     }
   `)
 
-// file(relativePath: {
-//   eq: "gatsby-astronaut.png"
-//   }) {
-//     size
-//     childImageSharp {
-//       fluid(maxWidth: 1000) {
-//         src
-//         ...GatsbyImageSharpFluid_tracedSVG
-//       }
-//     }
-//   }
-
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -62,7 +46,6 @@ const Layout = ({ children, location }) => {
       >
         {styles => (
           <div style={{overflow: 'hidden', ...styles}}>
-            {/* <Img fluid={data.file.childImageSharp.fluid} />   */}
           </div>
         )}
       </Spring>
@@ -70,7 +53,6 @@ const Layout = ({ children, location }) => {
         <div>
          {children}
         </div>
-        <Archive />
       </MainLayout>
     </>
   )
@@ -83,4 +65,5 @@ Layout.propTypes = {
 Layout.defaultProps = {
   location: {}
 }
+
 export default Layout

@@ -13,21 +13,21 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const Image = () => {
-
+const NonStretchedLogo = props => {
   const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fluid(maxHeight: 400) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  query {file(relativePath: {
+    eq: "logo.png"
+    }) {
+      childImageSharp {
+        fixed(width: 108, height: 108) {
+        ...GatsbyImageSharpFixed
+         }
+     }
     }
-  `)
+  }
+`)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fixed={data.file.childImageSharp.fixed}/>
 }
 
-export default Image
+export default NonStretchedLogo

@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import styled from 'styled-components'
 
 // Assets
-import Logo from "../components/image"
+import Logo from "../components/nonStretchedLogo"
 
 export const NavButton = styled.button`
   background: "white";

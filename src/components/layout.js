@@ -7,7 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import { Spring } from 'react-spring/renderprops'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'

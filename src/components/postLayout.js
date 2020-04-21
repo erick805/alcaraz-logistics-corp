@@ -3,23 +3,19 @@ import {graphql} from 'gatsby'
 
 // Components
 import Layout from './layout'
-import Archive from './archive'
 
 /* Static Query can be used anywhere, does not accept variables, can't use context
    Page Query must be used on pages
 */
 
-
-
 const PostLayout = ({data, path}) => {
     const {markdownRemark} = data
-    
+
     return (
         <>
         <Layout location={path}>
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
-          <Archive />
         </Layout>
         </>
     )

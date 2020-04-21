@@ -5,7 +5,7 @@ import React from "react"
 import styled from 'styled-components'
 
 // Assets
-import logo from '../images/logo.png'
+
 
 const HeaderWrapper = styled.div`
   background: #524763;
@@ -24,15 +24,6 @@ const HeaderContainer = styled.div`
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
     <HeaderContainer>
-    <div> 
-      <img 
-        style={{
-          width: '100px',
-        }}
-        src={logo}
-        alt="logo"
-      />    
-    </div>
     </HeaderContainer>
   </HeaderWrapper>
 )

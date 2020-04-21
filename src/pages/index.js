@@ -1,3 +1,6 @@
+/* eslint-disable import/first */
+const typeface = require("typeface-open-sans")
+
 import React from "react"
 import { Link } from "gatsby"
 
@@ -19,7 +22,7 @@ export const NavButton = styled.button`
 `;
 
 const IndexPage = ({location}) => (
-  <Layout location={location}>
+  <Layout location={location} >
     <Logo/>
     <SEO title="Home" />
     <h1>Alcaraz Logistics Corporation</h1>

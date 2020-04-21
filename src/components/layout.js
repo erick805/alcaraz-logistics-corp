@@ -12,17 +12,17 @@ import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 // Components
-import Header from "./header"
 
 // CSS
 import "./layout.css"
 
 const MainLayout = styled.main`
+  font-family: 'Quicksand', sans-serif;
   max-width: 90%;
   margin: 1rem auto;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 40px;
+  // display: grid;
+  // grid-template-columns: 3fr 1fr;
+  // grid-gap: 40px;
 `
 const Layout = ({ children, location }) => {
 
@@ -39,8 +39,8 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Spring
+      <MainLayout>
+      {/* <Spring
          from={{height: location.pathname === '/' ? 100 : 200 }}
          to={{height: location.pathname === '/' ? 200 : 100 }}
       >
@@ -48,8 +48,7 @@ const Layout = ({ children, location }) => {
           <div style={{overflow: 'hidden', ...styles}}>
           </div>
         )}
-      </Spring>
-      <MainLayout>
+      </Spring> */}
         <div>
          {children}
         </div>

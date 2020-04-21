@@ -23,7 +23,7 @@ import "./layout.css"
 const MainLayout = styled.main`
   max-width: 90%;
   margin: 1rem auto;
-  display: grid;
+  // display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 40px;
 `
@@ -37,19 +37,21 @@ const Layout = ({ children, location }) => {
           title
         }
       }
-      file(relativePath: {
-    eq: "gatsby-astronaut.png"
-    }) {
-      size
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          src
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
+
     }
   `)
+
+// file(relativePath: {
+//   eq: "gatsby-astronaut.png"
+//   }) {
+//     size
+//     childImageSharp {
+//       fluid(maxWidth: 1000) {
+//         src
+//         ...GatsbyImageSharpFluid_tracedSVG
+//       }
+//     }
+//   }
 
   return (
     <>
@@ -60,7 +62,7 @@ const Layout = ({ children, location }) => {
       >
         {styles => (
           <div style={{overflow: 'hidden', ...styles}}>
-            <Img fluid={data.file.childImageSharp.fluid} />  
+            {/* <Img fluid={data.file.childImageSharp.fluid} />   */}
           </div>
         )}
       </Spring>

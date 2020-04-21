@@ -5,36 +5,39 @@
  */
 const path = require('path')
 
- exports.createPages = ({graphql, actions}) => {
-     const {createPage} = actions
-     const postLayoutTemplate = path.resolve('./src/components/postLayout.js')
+ exports.createPages = async ({graphql, actions, reporter}) => {
+  const {createPage} = actions
      
-     return graphql(`
-       query blogSlugsQuery {
-         allMarkdownRemark {
-           edges {
-             node {
-               frontmatter {
-                 slug
-               }
-             }
-           }
+  const result = await graphql(`
+    query blogSlugsQuery {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              slug
+            }
           }
         }
-     `).then(results => {
-         if (results.errors) {
-             throw results.errors
-         }
-         results.data.allMarkdownRemark.edges.forEach(({node}) => {
-             createPage({
-                 path: `/posts${node.frontmatter.slug}`,
-                 component: postLayoutTemplate,
-                 context: {
-                     slug: node.frontmatter.slug
-                 }
-             })
-         })
-     })
- }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  const postLayoutTemplate = path.resolve('./src/components/postLayout.js')
+
+  result.data.allMarkdownRemark.edges.forEach(({node}) => {
+    createPage({
+      path: `/posts${node.frontmatter.slug}`,
+      component: postLayoutTemplate,
+      context: {
+        slug: node.frontmatter.slug
+      }
+    })
+  })
+}
 
 

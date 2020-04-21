@@ -7,26 +7,26 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Spring } from 'react-spring/renderprops'
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 
 // Components
-import Header from "./header"
 
 // CSS
 import "./layout.css"
 
 const MainLayout = styled.main`
-  max-width: 90%;
+  font-family: 'Quicksand', sans-serif;
+  max-width: 50%;
   margin: 1rem auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-gap: 40px;
+  grid-template-rows: auto;
+  margin-left: 7rem;
+  margin-top: 3rem;
 `
-const Layout = ({ children, location }) => {
+const Layout = ({ children}) => {
 
-  const data = useStaticQuery(graphql`
+  useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
@@ -37,21 +37,12 @@ const Layout = ({ children, location }) => {
     }
   `)
 
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Spring
-         from={{height: location.pathname === '/' ? 100 : 200 }}
-         to={{height: location.pathname === '/' ? 200 : 100 }}
-      >
-        {styles => (
-          <div style={{overflow: 'hidden', ...styles}}>
-          </div>
-        )}
-      </Spring>
       <MainLayout>
         <div>
-         {children}
+          {children}
         </div>
       </MainLayout>
     </>

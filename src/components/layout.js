@@ -15,14 +15,14 @@ import styled from 'styled-components'
 // CSS
 import "./layout.css"
 
-const MainLayout = styled.main`
+const MainLayoutStyle = styled.main`
   font-family: 'Quicksand', sans-serif;
   max-width: 50%;
   margin: 1rem auto;
   display: grid;
   grid-template-rows: auto;
-  margin-left: 7rem;
-  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
 `
 const Layout = ({ children}) => {
 
@@ -40,11 +40,11 @@ const Layout = ({ children}) => {
 
   return (
     <>
-      <MainLayout>
+      <MainLayoutStyle>
         <div>
           {children}
         </div>
-      </MainLayout>
+      </MainLayoutStyle>
     </>
   )
 }

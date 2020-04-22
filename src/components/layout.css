@@ -41,6 +41,8 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+  color: black
 }
 a:active,
 a:hover {
@@ -618,4 +620,8 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.nav-button:hover {
+  background-color: #5ce1e6;
 }

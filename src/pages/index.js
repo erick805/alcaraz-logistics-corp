@@ -44,7 +44,7 @@ return (
         <br/>
         <Link to="/our_services" >Our Services</Link>
         <br/>
-        <Link to="/contact_us" >Contact us</Link>
+        <Link to="/work_with_us" >Work with us</Link>
       </animated.div>
     </NavButtonStyle>
   </Layout>

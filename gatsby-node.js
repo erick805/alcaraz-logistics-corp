@@ -31,7 +31,7 @@ const path = require('path')
 
   result.data.allMarkdownRemark.edges.forEach(({node}) => {
     createPage({
-      path: `/posts${node.frontmatter.slug}`,
+      path: `${node.frontmatter.slug}`,
       component: postLayoutTemplate,
       context: {
         slug: node.frontmatter.slug

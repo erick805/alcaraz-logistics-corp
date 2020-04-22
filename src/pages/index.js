@@ -40,7 +40,11 @@ return (
                 })
                 .interpolate(x => `scale(${x})`)
             }}>
-        <Link to="/about/" >About US</Link>
+        <Link to="/about_us" >About US</Link>
+        <br/>
+        <Link to="/our_services" >Our Services</Link>
+        <br/>
+        <Link to="/contact_us" >Contact us</Link>
       </animated.div>
     </NavButtonStyle>
   </Layout>

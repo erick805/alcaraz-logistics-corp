@@ -10,7 +10,7 @@ import {useSpring, animated} from 'react-spring'
 // Assets
 import Logo from "../components/nonStretchedLogo"
 
-export const NavButton = styled.div`
+export const NavButtonStyle = styled.div`
   // background: "white";
   // font-size: 1em;
   margin: 1em;
@@ -28,7 +28,7 @@ return (
     <Logo/>
     <SEO title="Home" />
     <h1>Alcaraz Logistics Corporation</h1>
-    <NavButton >
+    <NavButtonStyle>
       <animated.div
             role="button" tabIndex={0} onClick={() => toggle(!location.pathname)} onKeyDown={() => toggle(!location.pathname)}
             style={{
@@ -40,9 +40,13 @@ return (
                 })
                 .interpolate(x => `scale(${x})`)
             }}>
-        <Link to="/about/" >About US</Link>
+        <Link to="/about_us" >About US</Link>
+        <br/>
+        <Link to="/our_services" >Our Services</Link>
+        <br/>
+        <Link to="/contact_us" >Contact us</Link>
       </animated.div>
-    </NavButton>
+    </NavButtonStyle>
   </Layout>
 
 )

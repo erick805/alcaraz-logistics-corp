@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
 
-const Post = styled.article`
+const PostStyle = styled.article`
   box-shadow: 0px 3px 10px rgba(25, 17, 34, 0.05);
   padding: 1rem;
   border-radius: 4px;
@@ -53,9 +53,9 @@ const Archive = () => {
             <ArchiveList>
             {blogPosts.allMarkdownRemark.edges.map(edge => (
                 <li key={edge.node.frontmatter.slug}>
-                  <Post>
+                  <PostStyle>
                     <Link  to={`/posts${edge.node.frontmatter.slug}`}>{edge.node.frontmatter.title}</Link>
-                    </Post>
+                    </PostStyle>
                 </li>
             ))}
             </ArchiveList>

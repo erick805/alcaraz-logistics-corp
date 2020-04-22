@@ -13,7 +13,7 @@ import Img from "gatsby-image"
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const NonStretchedLogo = props => {
+const NonStretchedLogo = () => {
   const data = useStaticQuery(graphql`
   query {file(relativePath: {
     eq: "logo.png"

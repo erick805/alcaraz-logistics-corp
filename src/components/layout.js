@@ -4,7 +4,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -15,16 +14,16 @@ import styled from 'styled-components'
 // CSS
 import "./layout.css"
 
-const MainLayout = styled.main`
+const MainLayoutStyle = styled.main`
   font-family: 'Quicksand', sans-serif;
   max-width: 50%;
   margin: 1rem auto;
   display: grid;
   grid-template-rows: auto;
-  margin-left: 7rem;
-  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-top: 2rem;
 `
-const Layout = ({ children}) => {
+const Layout = ({ children, location}) => {
 
   useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -40,11 +39,11 @@ const Layout = ({ children}) => {
 
   return (
     <>
-      <MainLayout>
-        <div>
+      <MainLayoutStyle>
+        <div location={location} >
           {children}
         </div>
-      </MainLayout>
+      </MainLayoutStyle>
     </>
   )
 }

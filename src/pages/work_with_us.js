@@ -1,14 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { FormattedMessage, injectIntl, Link } from "gatsby-plugin-intl"
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const work_with_us = () => (
+const work_with_us = ({ intl }) => (
   <Layout>
-    <SEO title="Work with us" />
-    <h3>Work with us</h3>
+    <SEO lang={intl.locale} title={intl.formatMessage({ id: "work_with_us" })} />
+    <h3>
+      <FormattedMessage id="work_with_us" />
+    </h3>
     <form name="contact-us" method="POST" data-netlify="true">
       <p>
         <label>Your Name: <input type="text" name="name" /></label>   
@@ -45,8 +46,10 @@ const work_with_us = () => (
         <button type="submit">Send</button>
       </p>
     </form>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/">
+      <FormattedMessage id="go_back" />
+    </Link>
   </Layout>
 )
 
-export default work_with_us
+export default injectIntl(work_with_us)

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 // Components
 import Layout from "../components/layout"
@@ -24,23 +24,35 @@ export const NavButtonStyle = styled.div`
 `;
 
 const IndexPage = ({location}) => {
-
-return (
-  <Layout location={location} >
-    <Logo/>
-    <SEO title="Home" />
-    <h1>Alcaraz Logistics Corporation</h1>
-    <NavButtonStyle className="nav-button">
-        <Link to="/about_us" >About us</Link>
-    </NavButtonStyle>
-    <NavButtonStyle className="nav-button">
-        <Link to="/our_services" >Our services</Link>
-    </NavButtonStyle>
-    <NavButtonStyle className="nav-button">
-        <Link to="/work_with_us" >Work with us</Link>
-    </NavButtonStyle>
-  </Layout>
-)
+  const intl = useIntl()
+  return (
+    <Layout location={location} >
+      <Logo/>
+      <SEO 
+        lang={intl.locale}
+        title={intl.formatMessage({ id: "title" })}
+        keywords={[`logistics`, `research`, `delivery`]}
+        />
+      <h1>
+        <FormattedMessage id="title" />
+      </h1>
+      <NavButtonStyle className="nav-button">
+        <Link to="/about_us" >
+          <FormattedMessage id="about_us" />
+        </Link>
+      </NavButtonStyle>
+      <NavButtonStyle className="nav-button">
+          <Link to="/our_services" >
+            <FormattedMessage id="our_services" />
+          </Link>
+      </NavButtonStyle>
+      <NavButtonStyle className="nav-button">
+          <Link to="/work_with_us" >
+            <FormattedMessage id="work_with_us" />
+          </Link>
+      </NavButtonStyle>
+    </Layout>
+  )
 }
 
 export default IndexPage

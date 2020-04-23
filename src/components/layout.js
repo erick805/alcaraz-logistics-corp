@@ -8,8 +8,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
+// import { useIntl } from "gatsby-plugin-intl"
 
 // Components
+import Header from './header'
 
 // CSS
 import "./layout.css"
@@ -24,7 +26,7 @@ const MainLayoutStyle = styled.main`
   margin-top: 2rem;
 `
 const Layout = ({ children, location}) => {
-
+  // const intl = useIntl()
   useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -40,9 +42,10 @@ const Layout = ({ children, location}) => {
   return (
     <>
       <MainLayoutStyle>
-        <div location={location} >
+        <Header />
+        <main location={location} >
           {children}
-        </div>
+        </main>
       </MainLayoutStyle>
     </>
   )

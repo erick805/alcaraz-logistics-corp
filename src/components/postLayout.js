@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, FormattedMessage } from 'gatsby-plugin-intl'
 import React from 'react'
 import {graphql} from 'gatsby'
 
@@ -17,7 +17,9 @@ const PostLayout = ({data, path}) => {
         <Layout location={path}>
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
-        <Link to="/">Go back to the homepage</Link>
+        <Link to="/">
+            <FormattedMessage id="go_back" />
+        </Link>
         </Layout>
         </>
     )

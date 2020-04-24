@@ -29,8 +29,8 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
-    //     name: `posts`,
-    //     path: `${__dirname}/src/posts`
+    //     name: `markdowns`,
+    //     path: `${__dirname}/src/markdowns`
     //   }
     // },
     `gatsby-transformer-sharp`,

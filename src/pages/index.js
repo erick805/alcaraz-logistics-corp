@@ -42,7 +42,7 @@ const IndexPage = ({location}) => {
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">
           <Link to="/our_services" >
-            <FormattedMessage id="Our services" />
+            <FormattedMessage id="services.title" />
           </Link>
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">

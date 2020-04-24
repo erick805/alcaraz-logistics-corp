@@ -1,10 +1,10 @@
   
 {
     "title": "Alcaraz Logistics Corporation",
-    "about_us": "About us",
-    "our_services": "Our services",
-    "work_with_us": "Work with us",
-    "go_back": "Go back to the homepage",
+    "About us": "About us",
+    "Our services": "Our services",
+    "Work with us": "Work with us",
+    "Go back to the homepage": "Go back to the homepage",
     "notfound": {
       "header": "NOT FOUND",
       "description": "You just hit a route that doesn't exist... the sadness."

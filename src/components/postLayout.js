@@ -1,4 +1,4 @@
-import { Link, FormattedMessage } from 'gatsby-plugin-intl'
+import { Link, FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
 import React from 'react'
 import {graphql} from 'gatsby'
 
@@ -9,16 +9,16 @@ import Layout from './layout'
    Page Query must be used on pages
 */
 
-const PostLayout = ({data, path}) => {
+const PostLayout = ({ intl, data, path}) => {
     const {markdownRemark} = data
 
     return (
         <>
         <Layout location={path}>
-        <h1>{markdownRemark.frontmatter.title}</h1>
+        <h1>{intl.formatMessage({ id: `${markdownRemark.frontmatter.title}` })}</h1>
         <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>
         <Link to="/">
-            <FormattedMessage id="go_back" />
+            <FormattedMessage id="Go back to the homepage" />
         </Link>
         </Layout>
         </>
@@ -45,5 +45,5 @@ export const query = graphql`
         }
     }  
 `
-export default PostLayout
+export default injectIntl(PostLayout)
 

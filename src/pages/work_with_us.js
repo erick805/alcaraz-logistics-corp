@@ -6,9 +6,9 @@ import SEO from "../components/seo"
 
 const work_with_us = ({ intl }) => (
   <Layout>
-    <SEO lang={intl.locale} title={intl.formatMessage({ id: "work_with_us" })} />
+    <SEO lang={intl.locale} title={intl.formatMessage({ id: "Work with us" })} />
     <h3>
-      <FormattedMessage id="work_with_us" />
+      <FormattedMessage id="Work with us" />
     </h3>
     <form name="contact-us" method="POST" data-netlify="true">
       <p>
@@ -47,7 +47,7 @@ const work_with_us = ({ intl }) => (
       </p>
     </form>
     <Link to="/">
-      <FormattedMessage id="go_back" />
+      <FormattedMessage id="Go back to the homepage" />
     </Link>
   </Layout>
 )

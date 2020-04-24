@@ -31,24 +31,23 @@ const IndexPage = ({location}) => {
       <SEO 
         lang={intl.locale}
         title={intl.formatMessage({ id: "title" })}
-        keywords={[`logistics`, `research`, `delivery`]}
         />
       <h1>
         <FormattedMessage id="title" />
       </h1>
       <NavButtonStyle className="nav-button">
         <Link to="/about_us" >
-          <FormattedMessage id="about_us" />
+          <FormattedMessage id="About us" />
         </Link>
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">
           <Link to="/our_services" >
-            <FormattedMessage id="our_services" />
+            <FormattedMessage id="Our services" />
           </Link>
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">
           <Link to="/work_with_us" >
-            <FormattedMessage id="work_with_us" />
+            <FormattedMessage id="Work with us" />
           </Link>
       </NavButtonStyle>
     </Layout>

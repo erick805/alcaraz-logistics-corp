@@ -1,9 +1,9 @@
 {
   "title": "Alcaraz Logistics Corporation",
-  "about_us": "Sobre nosotros",
-  "our_services": "Nuestros servicios",
-  "work_with_us": "Trabaja con nosotros",
-  "go_back": "Volver a la página principal",
+  "About us": "Sobre nosotros",
+  "Our services": "Nuestros servicios",
+  "Work with us": "Trabaja con nosotros",
+  "Go back to the homepage": "Volver a la página principal",
   "notfound": {
     "header": "No encontrado",
     "description": "You just hit a route that doesn't exist... the sadness."

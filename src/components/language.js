@@ -1,5 +1,6 @@
 import React from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import { DropdownButton, Dropdown } from "react-bootstrap"
 
 const languageName = {
   en: "English",
@@ -8,26 +9,30 @@ const languageName = {
 
 const Language = () => {
   return (
-    <div>
+      <DropdownButton
+        title="Choose your language"
+        // id="dropdown-variants-primary"
+        style={{marginBottom: '3rem'}}
+      >
       <IntlContextConsumer>
         {({ languages, language: currentLocale }) =>
           languages.map(language => (
-            <option
+            <Dropdown.Item
               key={language}
               onClick={() => changeLocale(language)}
               style={{
-                color: currentLocale === language ? `yellow` : `white`,
-                margin: 10,
+                color: currentLocale === language ? `#5ce1e6` : `black`,
+                margin: 5,
                 cursor: `pointer`,
               }}
               value={language}
             >
               {languageName[language]}
-            </option>
+            </Dropdown.Item>
           ))
         }
       </IntlContextConsumer>
-    </div>
+      </DropdownButton>
   )
 }
 

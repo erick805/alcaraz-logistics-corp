@@ -625,3 +625,13 @@ pre tt:after {
 .nav-button:hover {
   background-color: #5ce1e6;
 }
+
+button {
+  background-color: white;
+  border: 1px solid #5ce1e6;
+  border-radius: 15px;
+}
+
+button:hover {
+  background-color: #5ce1e6;
+}

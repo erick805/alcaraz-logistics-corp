@@ -2,7 +2,7 @@ import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 // Components
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
 // import {useSpring, animated} from 'react-spring'
@@ -26,8 +26,7 @@ export const NavButtonStyle = styled.div`
 const IndexPage = ({location}) => {
   const intl = useIntl()
   return (
-    // <Layout location={location} >
-    <>
+    <Layout location={location}>
       <Logo/>
       <SEO 
         lang={intl.locale}
@@ -51,8 +50,7 @@ const IndexPage = ({location}) => {
             <FormattedMessage id="Work with us" />
           </Link>
       </NavButtonStyle>
-    </>
-    // </Layout>
+    </Layout>
   )
 }
 

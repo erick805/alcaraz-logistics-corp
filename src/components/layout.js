@@ -6,7 +6,6 @@
  */
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql } from "gatsby"
 import styled from 'styled-components'
 // import { useIntl } from "gatsby-plugin-intl"
 
@@ -27,17 +26,6 @@ const MainLayoutStyle = styled.main`
 `
 const Layout = ({ children, location}) => {
   // const intl = useIntl()
-  // useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-
-  //   }
-  // `)
-
 
   return (
     <>

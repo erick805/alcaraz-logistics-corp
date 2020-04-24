@@ -3,7 +3,7 @@ import React from 'react'
 // import { graphql } from 'gatsby'
 
 // Components
-// import Layout from './layout'
+import Layout from '../components/layout'
 
 /* Static Query can be used anywhere, does not accept variables, can't use context
    Page Query must be used on pages
@@ -14,8 +14,7 @@ const about_us = ({ intl, data, path}) => {
     console.log("local", intl.locale)
 
     return (
-        <>
-        {/* <Layout location={path}> */}
+      <Layout location={path}>
         <h1>{intl.formatMessage({ id: "about.title" })}</h1>
         <h3>
             <FormattedMessage id="about.who.title" />
@@ -46,12 +45,10 @@ const about_us = ({ intl, data, path}) => {
               <FormattedMessage id="about.what.li.5" />
             </li>
         </ol>
-        {/* <div dangerouslySetInnerHTML={{__html: markdownRemark.html}}/>  */}
         <Link to="/">
             <FormattedMessage id="Go back to the homepage" />
         </Link>
-        {/* </Layout> */}
-        </>
+      </Layout> 
     )
 }
 

@@ -20,7 +20,6 @@ const MainLayoutStyle = styled.main`
   max-width: 50%;
   margin: 1rem auto;
   display: grid;
-  grid-template-rows: auto;
   margin-left: 5rem;
   margin-top: 2rem;
 `

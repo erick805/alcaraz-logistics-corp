@@ -13,7 +13,7 @@ import Logo from "../components/nonStretchedLogo"
 
 export const NavButtonStyle = styled.div`
   background: "white";
-  display: grid;  
+  display: inline-block;
   // font-size: 1em;
   // border-radius: 3px;
   border: 1px solid #5ce1e6;

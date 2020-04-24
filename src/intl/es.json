@@ -1,6 +1,23 @@
 {
   "title": "Alcaraz Logistics Corporation",
-  "About us": "Sobre nosotros",
+  "about": {
+    "title": "Sobre nosotros",
+    "who": {
+      "title": "Quienes somos",
+      "p": "Somos una empresa de logística multinacional con sede en la ciudad de Nueva York. Nuestro objetivo principal es que nuestros compradores y vendedores encuentren el producto que buscan al mejor precio posible con el servicio de entrega más eficiente disponible. Nuestra presencia en varios países nos permite contactar a múltiples distribuidores y fábricas en todo el mundo para ofrecer una mayor cantidad de marcas y precios."
+    },
+    "what": {
+      "title": "Que hacemos",
+      "description": "Sabemos que nuestros clientes provienen de diferentes orígenes y compran una variedad de productos diferentes. Esa es esencialmente la razón por la que ofrecemos múltiples servicios para satisfacer las necesidades de nuestros clientes.",
+      "li": {
+        "1": "Investigación",
+        "2": "Entrega al puerto del país de origen.",
+        "3": "Entrega al puerto del país de destino.",
+        "4": "Entrega al puerto del país de destino + Aduana.",
+        "5": "Puerta a puerta"
+      }
+    }
+  },
   "Our services": "Nuestros servicios",
   "Work with us": "Trabaja con nosotros",
   "Go back to the homepage": "Volver a la página principal",

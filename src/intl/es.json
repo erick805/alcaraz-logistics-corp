@@ -1,9 +1,48 @@
 {
   "title": "Alcaraz Logistics Corporation",
-  "about_us": "Sobre nosotros",
-  "our_services": "Nuestros servicios",
-  "work_with_us": "Trabaja con nosotros",
-  "go_back": "Volver a la página principal",
+  "about": {
+    "title": "Sobre nosotros",
+    "who": {
+      "title": "Quienes somos",
+      "p": "Somos una empresa de logística multinacional con sede en la ciudad de Nueva York. Nuestro objetivo principal es que nuestros compradores y vendedores encuentren el producto que buscan al mejor precio posible con el servicio de entrega más eficiente disponible. Nuestra presencia en varios países nos permite contactar a múltiples distribuidores y fábricas en todo el mundo para ofrecer una mayor cantidad de marcas y precios."
+    },
+    "what": {
+      "title": "Que hacemos",
+      "description": "Sabemos que nuestros clientes provienen de diferentes orígenes y compran una variedad de productos diferentes. Esa es esencialmente la razón por la que ofrecemos múltiples servicios para satisfacer las necesidades de nuestros clientes.",
+      "li": {
+        "1": "Investigación",
+        "2": "Entrega al puerto del país de origen.",
+        "3": "Entrega al puerto del país de destino.",
+        "4": "Entrega al puerto del país de destino + Aduana.",
+        "5": "Puerta a puerta"
+      }
+    }
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "research": {
+      "title": "Investigación",
+      "p": "Este servicio es para clientes que todavía buscan productos, múltiples marcas o una gama de precios. Nos enfocamos en proporcionar múltiples marcas de diferentes distribuidores, subsidiarias en diferentes países con diferentes precios. Queremos asegurarnos de que nuestros clientes puedan elegir el mejor producto en función de sus necesidades y presupuesto."
+    },
+    "delivery-country": {
+      "title": "Entrega al puerto del país de origen",
+      "p": "Este servicio se enfoca en logística. Una vez que se compra el producto, el cliente tiene la opción de transportarlo de forma independiente o utilizar este servicio. Entrega al puerto del país de origen: por lo general, se refiere al transporte de los productos desde el distribuidor o la fábrica hasta el puerto desde el cual se entregarán los productos. El cliente tendrá que darnos un destino, que generalmente es una empresa de transporte a donde se dejarán caer los productos."
+    },
+    "delivery-destination": {
+      "title": "Entrega al puerto del país de destino.",
+      "p": "Este servicio requiere más logística que el anterior, por lo que, naturalmente, es un servicio más costoso. Una vez que se compran los productos. Entonces podemos manejar el transporte al puerto del país de destino. Contratamos compañías navieras y nos encargamos de todos los trámites intermedios. Este servicio no incluye aduanas en el país de destino."
+    },
+    "delivery-destination-customs": {
+      "title": "Entrega al puerto del país de Destino + Aduana",
+      "p": "Una vez que se compra el producto, nos encargamos de transportarlo al país de destino. Este servicio nos permitirá ocuparnos de la aduana y todos los trámites necesarios para importar correctamente el producto en el país."
+    },
+    "door-to-door": {
+      "title": "Puerta a puerta",
+      "p": "Una vez que se compra el producto, manejamos el envío y toda la documentación, incluidas las aduanas. El cliente decide si quiere el producto en la puerta de su casa o negocio o en nuestra oficina. Este es el servicio más conveniente que tenemos, pero también es el más caro."
+    }
+  },
+  "Work with us": "Trabaja con nosotros",
+  "Go back to the homepage": "Volver a la página principal",
   "notfound": {
     "header": "No encontrado",
     "description": "You just hit a route that doesn't exist... the sadness."

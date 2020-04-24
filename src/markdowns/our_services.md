@@ -1,7 +1,7 @@
 ---
 slug: "/our_services"
 date: "2020-04-22"
-title: "Our Services"
+title: "Our services"
 ---
 
 ### Research

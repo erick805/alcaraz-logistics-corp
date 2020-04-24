@@ -26,29 +26,28 @@ export const NavButtonStyle = styled.div`
 const IndexPage = ({location}) => {
   const intl = useIntl()
   return (
-    <Layout location={location} >
+    <Layout location={location}>
       <Logo/>
       <SEO 
         lang={intl.locale}
         title={intl.formatMessage({ id: "title" })}
-        keywords={[`logistics`, `research`, `delivery`]}
         />
       <h1>
         <FormattedMessage id="title" />
       </h1>
       <NavButtonStyle className="nav-button">
         <Link to="/about_us" >
-          <FormattedMessage id="about_us" />
+          <FormattedMessage id="about.title" />
         </Link>
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">
           <Link to="/our_services" >
-            <FormattedMessage id="our_services" />
+            <FormattedMessage id="services.title" />
           </Link>
       </NavButtonStyle>
       <NavButtonStyle className="nav-button">
           <Link to="/work_with_us" >
-            <FormattedMessage id="work_with_us" />
+            <FormattedMessage id="Work with us" />
           </Link>
       </NavButtonStyle>
     </Layout>

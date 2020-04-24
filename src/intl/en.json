@@ -1,12 +1,50 @@
-  
 {
-    "title": "Alcaraz Logistics Corporation",
-    "about_us": "About us",
-    "our_services": "Our services",
-    "work_with_us": "Work with us",
-    "go_back": "Go back to the homepage",
-    "notfound": {
-      "header": "NOT FOUND",
-      "description": "You just hit a route that doesn't exist... the sadness."
+  "title": "Alcaraz Logistics Corporation",
+  "about": {
+    "title": "About us",
+    "who": {
+      "title": "Who we are",
+      "p": "We are a multinational logistics company with headquarters in New York City. Our main goal is that our buyers and sellers find the product they are looking for at the best price possible with the most efficient delivery service available. Our presence in multiple countries enables us to contact multiple distributors and factories all over the world to offer a broader number of brands and prices."
+    },
+    "what": {
+      "title": "What we do",
+      "description": "We know our customers come from different backgrounds and purchase a variety of different products. That is essentially why we offer multiple services to accommodate around our customer’s needs.",
+      "li": {
+        "1": "Research",
+        "2": "Delivery to the port of the home country.",
+        "3": "Delivery to the port of the country of destination.",
+        "4": "Delivery to the port of the country of destination + Customs.",
+        "5": "Door to Door"
+      }
     }
+  },
+  "services": {
+    "title": "Our services",
+    "research": {
+      "title": "Research",
+      "p": "This service is for customers who are still looking for products, multiple brands or a range of prices. We focus on providing multiple brands from different distributors, subsidiaries in different countries with different prices. We want to make sure our customers can choose the best product based on their needs and budget."
+    },
+    "delivery-country": {
+      "title": "Delivery to the port of the Home Country",
+      "p": "This service focuses on logistics. Once the product is purchased then the customer has the option to transport it independently or use this service. Delivery to the port of the home country: Usually refers to the transportation of the product(s) from the distributor or factory to the port from which the product(s) will be delivered. The customer will have to give us a destination, which is usually a transportation company to where the product(s) will be dropped."
+    },
+    "delivery-destination": {
+      "title": "Delivery to the port of the Country of Destination",
+      "p": "This service requires more logistics than the previous one, so naturally it is a more expensive service. Once the product(s) is purchased. Then we can handle the transportation to the port of the country of destination. We contract shipping companies and take care of all the paperwork in between. This service does not include customs at the destination country."
+    },
+    "delivery-destination-customs": {
+      "title": "Delivery to the port of the Country of Destination + Customs",
+      "p": "Once the product is purchased we take care of transporting it to the country of destination. This service will enable us to take care of customs and all the paperwork required to properly import the product into the country."
+    },
+    "door-to-door": {
+      "title": "Door to Door",
+      "p": "Once the product is purchased we handle shipping and all the paperwork including customs.The customer then decides if they want the product at the door of their house or business or at our office. This is the most convenient service we have but it is also the most expensive."
+    }
+  },
+  "Work with us": "Work with us",
+  "Go back to the homepage": "Go back to the homepage",
+  "notfound": {
+  "header": "NOT FOUND",
+    "description": "You just hit a route that doesn't exist... the sadness."
+  }
 }

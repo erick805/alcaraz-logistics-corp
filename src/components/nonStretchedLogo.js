@@ -27,7 +27,7 @@ const NonStretchedLogo = () => {
   }
 `)
 
-  return <Img fixed={data.file.childImageSharp.fixed}/>
+  return <Img fixed={data.file.childImageSharp.fixed} style={{display: 'block', marginLeft: 'auto', marginRight: 'auto' }}/>
 }
 
 export default NonStretchedLogo

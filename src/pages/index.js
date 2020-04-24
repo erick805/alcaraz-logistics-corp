@@ -1,11 +1,12 @@
 import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+// import {useSpring, animated} from 'react-spring'
 
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from 'styled-components'
-// import {useSpring, animated} from 'react-spring'
+import Language from "../components/language"
 
 // Assets
 import Logo from "../components/nonStretchedLogo"
@@ -27,6 +28,7 @@ const IndexPage = ({location}) => {
   const intl = useIntl()
   return (
     <Layout location={location}>
+      <Language />
       <Logo/>
       <SEO 
         lang={intl.locale}

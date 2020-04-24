@@ -18,7 +18,6 @@ const Language = () => {
               style={{
                 color: currentLocale === language ? `yellow` : `white`,
                 margin: 10,
-                textDecoration: `underline`,
                 cursor: `pointer`,
               }}
               value={language}

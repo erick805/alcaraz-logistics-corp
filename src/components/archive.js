@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql, Link } from "gatsby"
+// import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from 'styled-components'
 
 const PostStyle = styled.article`
@@ -28,23 +28,23 @@ const ArchiveList = styled.ul`
   list-style: none;
 `
 const Archive = () => {
-  const blogPosts = useStaticQuery(graphql`
-  query BlogPostArchive {
-    allMarkdownRemark(limit: 5, sort: {
-        order: DESC
-        fields: [frontmatter___date]
-    }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            slug
-          }
-        }
-      }
-    }
-  }
-  `)
+  // const blogPosts = useStaticQuery(graphql`
+  // query BlogPostArchive {
+  //   allMarkdownRemark(limit: 5, sort: {
+  //       order: DESC
+  //       fields: [frontmatter___date]
+  //   }) {
+  //     edges {
+  //       node {
+  //         frontmatter {
+  //           title
+  //           slug
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // `)
 
   return (
     <>

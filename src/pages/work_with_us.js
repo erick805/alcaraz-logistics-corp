@@ -10,7 +10,7 @@ const work_with_us = ({ intl }) => (
     <h3>
       <FormattedMessage id="Work with us" />
     </h3>
-    <form name="contact-us" method="POST" data-netlify="true">
+    <form name="work-with-us" method="POST" data-netlify="true">
       <p>
         <label>Your Name: <input type="text" name="name" /></label>   
       </p>

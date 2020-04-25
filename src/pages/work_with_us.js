@@ -15,14 +15,14 @@ const work_with_us = ({ intl }) => (
       <FormattedMessage id="Work with us" />
     </h3>
     <form 
-      name="work-with-us" 
+      name="work_with_us" 
       method="post" 
       action= "thanks/"
       data-netlify="true" 
       data-netlify-honeypot="bot-field"
     >
       <input type="hidden" name="bot-field" />
-      <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="form-name" value="work_with_us" />
       <p>
         <label>Your Name: <input type="text" name="name" /></label>   
       </p>

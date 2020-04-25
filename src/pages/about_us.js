@@ -3,6 +3,8 @@ import React from 'react'
 
 // Components
 import Layout from '../components/layout'
+
+// CSS
 import { NavButtonStyle } from './index'
 
 /* Static Query can be used anywhere, does not accept variables, can't use context

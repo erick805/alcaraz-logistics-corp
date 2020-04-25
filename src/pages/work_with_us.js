@@ -44,7 +44,7 @@ const work_with_us = ({ intl }) => (
       </p>
       <p>
         <label>Our Service: <select name="role[]" multiple>
-          <option value="apparel">research</option>
+          <option value="research">research</option>
           <option value="deliver-port-home-country">deliver-port-home-country</option>
           <option value="deliver-port-destination-country">deliver-port-destination-country</option>
           <option value="deliver-port-destination-country+customs">deliver-port-destination-country+customs</option>

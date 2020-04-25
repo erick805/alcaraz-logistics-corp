@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Alcaraz Logistics Corporation`,
-    description: `We are a multinational logistics company with headquarters in New York City`
+    description: `We are a multinational logistics company with headquarters in New York City`,
+    siteUrl: `https://jovial-shaw-cff1d8.netlify.app`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -48,6 +49,8 @@ module.exports = {
       }
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

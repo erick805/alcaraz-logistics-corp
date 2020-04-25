@@ -10,8 +10,6 @@ import { NavButtonStyle } from './index'
 */
 
 const our_services = ({ intl, data, path}) => {
-    // const { markdownRemark } = data
-    console.log("local", intl.locale)
 
     return (
       <Layout location={path}>
@@ -59,20 +57,4 @@ our_services.propTypes = {
 
 }
 
-// export const query = graphql`
-//   query PostQuery($slug: String!) {
-//         markdownRemark(frontmatter: {
-//         slug: {
-//             eq: $slug
-//         }
-//         }) {
-//         html
-//         frontmatter {
-//             title
-//             date
-//             slug
-//         }
-//         }
-//     }  
-// `
 export default injectIntl(our_services)

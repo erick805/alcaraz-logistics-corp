@@ -1,11 +1,11 @@
 import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 import { useSpring, animated } from 'react-spring'
+import styled from 'styled-components'
 
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from 'styled-components'
 import Language from "../components/language"
 
 // Assets

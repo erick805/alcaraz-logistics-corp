@@ -10,8 +10,6 @@ import React from 'react'
 */
 
 const PostLayout = ({ intl, data, path}) => {
-    // const {markdownRemark} = data
-    console.log("local", intl.locale)
     return (
         <>
         {/* <Layout location={path}> */}

@@ -17,7 +17,7 @@ export const NavButtonStyle = styled.button`
   // font-size: 1em;
   // border-radius: 3px;
   border: 1px solid #5ce1e6;
-  padding: 6px 8px;
+  padding: 15px 32px;
   text-align: center;
   margin: 4px 2px;
   transition-duration: 0.4s;

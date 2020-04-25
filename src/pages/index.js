@@ -25,13 +25,10 @@ export const NavButtonStyle = styled.button`
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
 `;
 
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
-
 const IndexPage = ({location}) => {
   const intl = useIntl()
-  const [props, set] = useSpring(() => ({ xys: [1, 1, 1], config: { mass: 5, tension: 300, friction: 40 } }))
-
+  const props = useSpring({opacity: 1, from: {opacity: 0}})
+  
   return (
     <Layout location={location}>
       <Language />
@@ -43,40 +40,34 @@ const IndexPage = ({location}) => {
       <h1>
         <FormattedMessage id="title" />
       </h1>
-    <animated.div
-      onMouseMove={({ clientX: y, clientY: x }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 2, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
-    >
-      <NavButtonStyle className="nav-button">
-        <Link to="/about_us" >
-          <FormattedMessage id="about.title" />
-        </Link>
-      </NavButtonStyle>
-    </animated.div>
-    <animated.div
-      onMouseMove={({ clientX: y, clientY: x }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 2, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
-    >
-      <NavButtonStyle className="nav-button">
-        <Link to="/our_services" >
-          <FormattedMessage id="services.title" />
-        </Link>
-      </NavButtonStyle>
-    </animated.div>
-    <animated.div
-      onMouseMove={({ clientX: y, clientY: x }) => set({ xys: calc(x, y) })}
-      onMouseLeave={() => set({ xys: [0, 2, 1] })}
-      style={{ transform: props.xys.interpolate(trans) }}
-    >
-      <NavButtonStyle className="nav-button">
-        <Link to="/work_with_us" >
-          <FormattedMessage id="Work with us" />
-        </Link>
-      </NavButtonStyle>
-    </animated.div>
-  </Layout>
+      <animated.div 
+        style={props}
+      >
+        <NavButtonStyle className="nav-button">
+          <Link to="/about_us" >
+            <FormattedMessage id="about.title" />
+          </Link>
+        </NavButtonStyle>
+      </animated.div>
+      <animated.div 
+        style={props}
+      >
+        <NavButtonStyle className="nav-button">
+          <Link to="/our_services" >
+            <FormattedMessage id="services.title" />
+          </Link>
+        </NavButtonStyle>
+      </animated.div>
+      <animated.div 
+        style={props}
+      >
+        <NavButtonStyle className="nav-button">
+          <Link to="/work_with_us" >
+            <FormattedMessage id="Work with us" />
+          </Link>
+        </NavButtonStyle>
+      </animated.div>
+    </Layout>
   )
 }
 

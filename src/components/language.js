@@ -1,6 +1,7 @@
 import React from "react"
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 import { DropdownButton, Dropdown } from "react-bootstrap"
+import { useSpring, animated } from 'react-spring'
 
 const languageName = {
   en: "English",
@@ -8,8 +9,12 @@ const languageName = {
 }
 
 const Language = () => {
+  const props = useSpring({opacity: 1, from: {opacity: 0}})
   
   return (
+    <animated.div
+      style={props}
+    >
       <DropdownButton
         title="Choose your language"
         // id="dropdown-variants-primary"
@@ -34,6 +39,7 @@ const Language = () => {
           }
         </IntlContextConsumer>
       </DropdownButton>
+    </animated.div>
   )
 }
 

@@ -1,6 +1,6 @@
 import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
-// import { useSpring, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
 // Components
 import Layout from "../components/layout"
@@ -27,7 +27,8 @@ export const NavButtonStyle = styled.button`
 
 const IndexPage = ({location}) => {
   const intl = useIntl()
-
+  const props = useSpring({opacity: 1, from: {opacity: 0}})
+  
   return (
     <Layout location={location}>
       <Language />
@@ -39,21 +40,33 @@ const IndexPage = ({location}) => {
       <h1>
         <FormattedMessage id="title" />
       </h1>
-      <NavButtonStyle className="nav-button">
+      <animated.div 
+        style={props}
+      >
+        <NavButtonStyle className="nav-button">
           <Link to="/about_us" >
             <FormattedMessage id="about.title" />
           </Link>
-      </NavButtonStyle>
+        </NavButtonStyle>
+      </animated.div>
+      <animated.div 
+        style={props}
+      >
         <NavButtonStyle className="nav-button">
           <Link to="/our_services" >
             <FormattedMessage id="services.title" />
           </Link>
         </NavButtonStyle>
+      </animated.div>
+      <animated.div 
+        style={props}
+      >
         <NavButtonStyle className="nav-button">
           <Link to="/work_with_us" >
             <FormattedMessage id="Work with us" />
           </Link>
         </NavButtonStyle>
+      </animated.div>
     </Layout>
   )
 }

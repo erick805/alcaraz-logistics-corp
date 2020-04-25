@@ -11,7 +11,7 @@ import Language from "../components/language"
 // Assets
 import Logo from "../components/nonStretchedLogo"
 
-export const NavButtonStyle = styled.div`
+export const NavButtonStyle = styled.button`
   background: "white";
   display: inline-block;
   // font-size: 1em;

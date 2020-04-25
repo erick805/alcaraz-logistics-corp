@@ -3,6 +3,7 @@ import { FormattedMessage, injectIntl, Link } from "gatsby-plugin-intl"
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { NavButtonStyle } from "./index"
 
 const work_with_us = ({ intl }) => (
   <Layout>
@@ -46,9 +47,11 @@ const work_with_us = ({ intl }) => (
         <button type="submit">Send</button>
       </p>
     </form>
-    <Link to="/">
-      <FormattedMessage id="Go back to the homepage" />
-    </Link>
+    <NavButtonStyle>
+      <Link to="/">
+        <FormattedMessage id="Go back to the homepage" />
+      </Link>
+    </NavButtonStyle>
   </Layout>
 )
 

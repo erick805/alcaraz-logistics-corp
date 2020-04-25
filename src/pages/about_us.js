@@ -4,6 +4,7 @@ import React from 'react'
 
 // Components
 import Layout from '../components/layout'
+import { NavButtonStyle } from './index'
 
 /* Static Query can be used anywhere, does not accept variables, can't use context
    Page Query must be used on pages
@@ -45,9 +46,11 @@ const about_us = ({ intl, data, path}) => {
               <FormattedMessage id="about.what.li.5" />
             </li>
         </ol>
-        <Link to="/">
+        <NavButtonStyle>
+          <Link to="/">
             <FormattedMessage id="Go back to the homepage" />
-        </Link>
+          </Link>
+        </NavButtonStyle>
       </Layout> 
     )
 }

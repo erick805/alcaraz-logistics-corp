@@ -42,8 +42,8 @@ module.exports = {
         name: `Alogs`,
         short_name: `Alogs`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#5ce1e6`,
+        theme_color: `#5ce1e6`,
         display: `minimal-ui`,
         icon: `src/images/logo.png` // This path is relative to the root of the site.
       }
@@ -51,9 +51,9 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`
   ]
 }

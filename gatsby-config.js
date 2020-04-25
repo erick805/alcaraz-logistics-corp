@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Alcaraz Logistics Corporation`,
     description: `We are a multinational logistics company with headquarters in New York City`,
-    siteUrl: `https://jovial-shaw-cff1d8.netlify.app`
+    siteUrl: `https://www.alogs.co`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

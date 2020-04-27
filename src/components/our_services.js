@@ -3,10 +3,10 @@ import React from 'react'
 // import { graphql } from 'gatsby'
 
 // Components
-import Layout from '../components/layout'
+import Layout from './layout'
 
 //CSS
-import { NavButtonStyle } from './index'
+import { NavButtonStyle } from '../pages/index'
 
 /* Static Query can be used anywhere, does not accept variables, can't use context
    Page Query must be used on pages

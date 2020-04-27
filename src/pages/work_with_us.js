@@ -12,7 +12,8 @@ const work_with_us = ({ intl }) => (
   <Layout>
     <SEO lang={intl.locale} title={intl.formatMessage({ id: "Work with us" })} />
     <h3>
-      <FormattedMessage id="Work with us" />
+      Work with us
+      {/* <FormattedMessage id="Work with us" /> */}
     </h3>
     <form 
       name="work_with_us" 
@@ -60,7 +61,8 @@ const work_with_us = ({ intl }) => (
     </form>
     <NavButtonStyle>
       <Link to="/">
-        <FormattedMessage id="Go back to the homepage" />
+        Go back to the homepage
+        {/* <FormattedMessage id="Go back to the homepage" /> */}
       </Link>
     </NavButtonStyle>
   </Layout>

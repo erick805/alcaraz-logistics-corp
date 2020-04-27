@@ -15,10 +15,12 @@ const NotFoundPage = () => {
       title={`404: ${intl.formatMessage({ id: "title" })}`}
     />
     <h1>
-      <FormattedMessage id="notfound.header" />
+      NOT FOUND
+      {/* <FormattedMessage id="notfound.header" /> */}
     </h1>
     <p>
-      <FormattedMessage id="notfound.description" />
+      You just hit a route that doesn&#39;t exist... the sadness.
+      {/* <FormattedMessage id="notfound.description" /> */}
     </p>
     </Layout>
   )

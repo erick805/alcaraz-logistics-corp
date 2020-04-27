@@ -6,7 +6,7 @@ import styled from 'styled-components'
 // Components
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Language from "../components/language"
+// import Language from "../components/language"
 
 // Assets
 import Logo from "../components/nonStretchedLogo"
@@ -31,21 +31,22 @@ const IndexPage = ({location}) => {
   
   return (
     <Layout location={location}>
-      <Language />
+      {/* <Language /> */}
       <Logo/>
       <SEO 
         lang={intl.locale}
         title={intl.formatMessage({ id: "title" })}
         />
       <h1>
-        <FormattedMessage id="title" />
+        Alcaraz Logistics Corporation
+        {/* <FormattedMessage id="title" /> */}
       </h1>
       <animated.div 
         style={props}
       >
         <NavButtonStyle className="nav-button">
-          <Link to="/about_us" >
-            <FormattedMessage id="about.title" />
+          <Link to="/about_us" >About us
+            {/* <FormattedMessage id="about.title" /> */}
           </Link>
         </NavButtonStyle>
       </animated.div>
@@ -53,8 +54,8 @@ const IndexPage = ({location}) => {
         style={props}
       >
         <NavButtonStyle className="nav-button">
-          <Link to="/our_services" >
-            <FormattedMessage id="services.title" />
+          <Link to="/our_services" >Our services
+            {/* <FormattedMessage id="services.title" /> */}
           </Link>
         </NavButtonStyle>
       </animated.div>
@@ -62,8 +63,8 @@ const IndexPage = ({location}) => {
         style={props}
       >
         <NavButtonStyle className="nav-button">
-          <Link to="/work_with_us" >
-            <FormattedMessage id="Work with us" />
+          <Link to="/work_with_us" >Work with us
+            {/* <FormattedMessage id="Work with us" /> */}
           </Link>
         </NavButtonStyle>
       </animated.div>
